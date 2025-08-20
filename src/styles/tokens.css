@@ -1,0 +1,20 @@
+:root {
+  /* Neutrals */
+  --bg: #f7f8fb;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #e1e2e4;
+  --border: #e6e8ef;
+
+  /* Accent */
+  --primary: #4c6fff;
+  --primary-600: #3e5ef7;
+  --on-primary: #ffffff;
+
+  /* Status */
+  --success: #22c55e;
+  --danger: #e5484d;
+
+  /* Extras */
+  --border-r-cards: 10px;
+}
