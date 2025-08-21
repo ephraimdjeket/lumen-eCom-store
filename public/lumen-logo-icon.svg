@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+      <defs>
+        <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#4C6FFF" flood-opacity="0.2"/>
+        </filter>
+      </defs>
+      <g filter="url(#soft)">
+        <circle cx="256.0" cy="256.0" r="190.32" fill="none" stroke="#4C6FFF" stroke-opacity="0.15" stroke-width="12"/>
+        
+          <rect x="245.76" y="220.16"
+                width="194.56" height="71.68"
+                rx="12" ry="12"
+                fill="#4C6FFF" transform="rotate(0 343.04 256.00)"/>
+        
+          <rect x="202.24" y="295.54"
+                width="194.56" height="71.68"
+                rx="12" ry="12"
+                fill="#4C6FFF" transform="rotate(60 299.52 331.38)"/>
+        
+          <rect x="115.20" y="295.54"
+                width="194.56" height="71.68"
+                rx="12" ry="12"
+                fill="#4C6FFF" transform="rotate(120 212.48 331.38)"/>
+        
+          <rect x="71.68" y="220.16"
+                width="194.56" height="71.68"
+                rx="12" ry="12"
+                fill="#4C6FFF" transform="rotate(180 168.96 256.00)"/>
+        
+          <rect x="115.20" y="144.78"
+                width="194.56" height="71.68"
+                rx="12" ry="12"
+                fill="#4C6FFF" transform="rotate(240 212.48 180.62)"/>
+        
+          <rect x="202.24" y="144.78"
+                width="194.56" height="71.68"
+                rx="12" ry="12"
+                fill="#4C6FFF" transform="rotate(300 299.52 180.62)"/>
+        
+        <circle cx="256.0" cy="256.0" r="71.68" fill="#ffffff"/>
+      </g>
+    </svg>
