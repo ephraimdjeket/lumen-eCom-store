@@ -5,12 +5,12 @@ export default function Header() {
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
-        <div className={classes.logo}>Lumen</div>
-        <ul>
+        <div className={classes.logo}><h1>Lumen</h1></div>
+        <ul className={classes.list}>
           <li>Home</li>
           <li>Contact</li>
+          <li><ShoppingCart aria-hidden="true" size={20} /></li>
         </ul>
-        <ShoppingCart aria-hidden="true" size={20} />
       </nav>
     </header>
   )
