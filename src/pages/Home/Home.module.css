@@ -1,27 +1,24 @@
 .homeContainer {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 1fr);
   gap: 1rem;
   max-width: 1280px;
   margin: auto;
 }
 
 .herocard {
-  grid-column: 1 / -1;
-  grid-row: 1 / 3;
-  background-color: #ffffff;
-  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 2rem;
+  height: 365px;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid var(--border);
   border-radius: var(--border-r-cards);
+  background-image: url("/herocard-bg.png");
 }
 
 .herocontent {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -29,28 +26,19 @@
 }
 
 .herocontent > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   max-width: 600px;
 }
 
-/* Product card styling */
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--surface);
+.searchinput {
   border: 1px solid var(--border);
   border-radius: var(--border-r-cards);
-  padding: 1.2rem;
-  gap: 1rem;
-  height: 100%;
-}
-
-.imagedummy {
-  background-color: var(--muted);
-  border-radius: var(--border-r-cards);
   width: 100%;
-  height: 180px;
+  max-width: 400px;
+  padding: 1rem 1rem;
+  outline-color: var(--primary);
 }
 
 .button {
@@ -59,26 +47,20 @@
   border: none;
   background-color: var(--primary);
   color: var(--on-primary);
-  padding: 1rem 2rem;
 }
 
-.button:hover {
-  background-color: var(--primary-600);
+.browseall {
+  text-decoration: none;
+  padding: 1rem 4rem;
 }
 
-.firstcard {
-  grid-column: 1 / 3;
-  grid-row: 3 / 5;
-}
+/* Product card styling */
 
-.secondcard {
-  grid-column: 3 / 5;
-  grid-row: 3 / 5;
-}
-
-.thirdcard {
-  grid-column: 5 / 7;
-  grid-row: 3 / 5;
+.cardswrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2rem 0rem;
 }
 
 /* Products styling */
@@ -88,4 +70,24 @@
   display: grid;
 }
 
-/* */
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  .cardswrapper {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+/* Tablet view */
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+  .cardswrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile and tablet view */
+@media screen and (max-width: 1280px) {
+  .homeContainer,
+  nav {
+    padding: 0rem 1rem;
+  }
+}
