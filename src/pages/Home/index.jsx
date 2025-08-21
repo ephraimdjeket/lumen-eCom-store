@@ -1,4 +1,6 @@
 import h from "./Home.module.css";
+import Card from "../../components/Card";
+
 
 export default function Home() {
   return (
@@ -8,42 +10,18 @@ export default function Home() {
           <div className={h.herocontent}>
             <div>
               <h2>Find your next favorite product</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae facilis sapiente, itaque cum officia veritatis atque voluptatibus repellendus in quas reprehenderit laudantium exercitationem quo omnis quasi expedita illum soluta tenetur.</p></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae facilis sapiente, itaque cum officia veritatis atque</p></div>
+            <input aria-label="search input" className={h.searchinput} id="search" type="search" placeholder="Search products by title..." />
+            <a href="#products" class={`${h.button} ${h.browseall}`}> Browse all</a>
           </div>
-          <a href="#products"> Browse all</a>
         </div>
-        <article className={`${h.card} ${h.firstcard}`}>
-          {/* <img src="" alt="" /> */}
-          <div className={h.imagedummy}></div>
-          <h2>Product name</h2>
-          <p>$999</p>
-          <button className={h.button}>View Product</button>
-        </article>
-        <article className={`${h.card} ${h.secondcard}`}>
-          {/* <img src="" alt="" /> */}
-          <div className={h.imagedummy}></div>
-          <h2>Product name</h2>
-          <p>$999</p>
-          <button className={h.button}>View Product</button>
-        </article>
-        <article className={`${h.card} ${h.thirdcard}`}>
-          {/* <img src="" alt="" /> */}
-          <div className={h.imagedummy}></div>
-          <h2>Product name</h2>
-          <p>$999</p>
-          <button className={h.button}>View Product</button>
-        </article>
-        <section className={h.products} id="products">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <section className={h.cardswrapper} id="products">
+          < Card />
+          < Card />
+          < Card />
+          < Card />
+          < Card />
+          < Card />
         </section>
       </section >
     </>
