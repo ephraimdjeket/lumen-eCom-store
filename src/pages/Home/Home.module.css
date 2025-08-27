@@ -75,6 +75,10 @@
   .cardswrapper {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+
+  .herocontent {
+    padding: 0rem 1rem;
+  }
 }
 
 /* Tablet view */
