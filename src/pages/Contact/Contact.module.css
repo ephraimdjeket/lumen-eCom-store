@@ -1,0 +1,56 @@
+.homeContainer {
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  margin: auto;
+  min-height: 40vh;
+  margin-bottom: 2rem;
+}
+
+.contactForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0rem;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--border-r-cards);
+  background-image: url("/herocard-bg.png");
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  margin: 2rem 0rem;
+}
+
+.inputGroup > input {
+  height: 40px;
+  padding-left: 0.5rem;
+}
+
+.inputGroup > label {
+  font-weight: 600;
+}
+
+textarea {
+  height: 150px;
+}
+
+.submitFormBtn {
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
