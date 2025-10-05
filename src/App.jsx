@@ -3,6 +3,7 @@ import Contact from "./pages/Contact";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/utils/Layout";
 import NotFound from "./components/utils/NotFound";
+import ShoppingCart from "./pages/Shoppingcart";
 
 export default function App() {
   return (
@@ -10,8 +11,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={< Home />} />
-          <Route path="/Contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/cart" element={<ShoppingCart />} />
         </Route>
       </Routes>
     </>
