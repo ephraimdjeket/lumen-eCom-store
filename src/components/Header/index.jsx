@@ -9,8 +9,8 @@ export default function Header() {
         <div className={classes.logo}><h1>Lumen</h1></div>
         <ul className={classes.list}>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/Contact">Contact</Link></li>
-          <li ><Link className={classes.cartamount}><ShoppingCart aria-hidden="true" size={20} /><span ></span>0</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+          <li ><Link to="/cart" className={classes.cartamount}><ShoppingCart aria-hidden="true" size={20} /><span ></span>0</Link></li>
         </ul>
       </nav>
     </header>
