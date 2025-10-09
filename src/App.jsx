@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/utils/Layout";
 import NotFound from "./components/utils/NotFound";
 import ShoppingCart from "./pages/Shoppingcart";
+import ProductDetail from "./pages/ProductDetail";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/cart" element={<ShoppingCart />} />
+          <Route path="/productdetail/:id" element={<ProductDetail />} />
         </Route>
       </Routes>
     </>
