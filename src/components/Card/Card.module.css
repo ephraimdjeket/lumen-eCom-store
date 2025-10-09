@@ -35,3 +35,24 @@
 .cardstyle > button {
   padding: 1rem;
 }
+
+.pricescontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.realpricecontainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price {
+  font-weight: 600;
+}
+
+.realprice {
+  color: rgb(221, 0, 0);
+  text-decoration: line-through;
+}
