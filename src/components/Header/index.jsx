@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
-        <div className={classes.logo}><h1>Lumen</h1></div>
+        <Link to="/" className={classes.logo}><h1>Lumen</h1></Link>
         <ul className={classes.list}>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/contact">Contact</Link></li>
