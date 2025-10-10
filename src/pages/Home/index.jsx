@@ -9,18 +9,37 @@ export default function Home() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  /*Add error + loading*/
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     async function productData() {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error("Failed to fetch");
-      const { data } = await res.json();
-      setProducts(data);
+      try {
+        setLoading(true);
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("Failed to fetch");
+        const { data } = await res.json();
+        setProducts(data);
+      } catch (error) {
+        setError(true);
+        setError(error.message)
+      } finally {
+        setLoading(false);
+      }
     }
-    productData();
-  }, [])
 
+    productData();
+  }, [url]);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>
+
+  function searchFilter(e) {
+    setSearch(e.target.value);
+  }
+
+  const filterProducts = products.filter((product) => {
+    return product.title.toLowerCase().includes(search.toLowerCase())
+  });
 
   return (
     <>
@@ -30,14 +49,18 @@ export default function Home() {
             <div>
               <h2>Find your next favorite product</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae facilis sapiente, itaque cum officia veritatis atque</p></div>
-            <input aria-label="search input" className={h.searchinput} id="search" type="search" placeholder="Search products by title..." />
+            <input onChange={searchFilter} aria-label="search input" className={h.searchinput} id="search" type="search" placeholder="Search products by title..." />
             <a href="#products" className={`${h.button} ${h.browseall}`}> Browse all</a>
           </div>
         </div>
         <section className={h.cardswrapper} id="products">
-          {products.map((product) => (
-            <Card key={product.id} {...product} />
-          ))}
+          {filterProducts.length > 0 ? (
+            filterProducts.map((product) => (
+              <Card key={product.id} {...product} />
+            ))
+          ) : (
+            <p>No products found</p>
+          )}
         </section>
       </section >
     </>
