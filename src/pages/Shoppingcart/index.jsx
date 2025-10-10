@@ -1,4 +1,4 @@
-import s from "./ShoppingCart.module.css";
+import s from "./Shoppingcart.module.css";
 
 export default function ShoppingCart() {
   return (
