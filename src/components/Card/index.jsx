@@ -2,7 +2,6 @@ import c from "./Card.module.css";
 import { Link } from "react-router-dom";
 
 export default function Card({ title, price, discountedPrice, image, rating, id }) {
-  const url = "https://v2.api.noroff.dev/online-shop";
 
   return (
     <article className={c.cardstyle}>
