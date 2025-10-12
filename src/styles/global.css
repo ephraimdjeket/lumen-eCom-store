@@ -42,3 +42,41 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.loaderwrapper {
+  display: flex;
+  align-items: center;
+  height: 80vh;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 108px;
+  height: 108px;
+  border: 10px solid #fff;
+  border-bottom-color: var(--primary);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.errormessage {
+  margin: 2rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--danger);
+}
