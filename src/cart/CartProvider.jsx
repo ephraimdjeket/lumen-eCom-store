@@ -10,9 +10,7 @@ function cartReducer(state, action) {
       let updatedCart;
       if (existing) {
         updatedCart = state.cart.map(p =>
-          p.id === action.payload.id
-            ? { ...p, quantity: p.quantity + 1 }
-            : p
+          p.id === action.payload.id ? { ...p, quantity: p.quantity + 1 } : p
         );
       } else {
         updatedCart = [...state.cart, { ...action.payload, quantity: 1 }];
@@ -28,11 +26,9 @@ function cartReducer(state, action) {
     }
 
     case "removeProduct": {
-      let updatedCart = state.cart
+      const updatedCart = state.cart
         .map(p =>
-          p.id === action.payload.id
-            ? { ...p, quantity: p.quantity - 1 }
-            : p
+          p.id === action.payload.id ? { ...p, quantity: p.quantity - 1 } : p
         )
         .filter(p => p.quantity > 0);
       return {
