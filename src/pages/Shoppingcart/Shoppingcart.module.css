@@ -1,9 +1,9 @@
 .cartwrapper {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  max-width: 1280px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
   padding: 0rem 1rem;
 }
 
@@ -20,14 +20,13 @@
 }
 
 .cartitem > img {
-  height: 300px;
+  width: 300px;
   border: 1px solid black;
 }
 
 .ordersummary {
   display: flex;
   gap: 1rem;
-  padding-right: 1rem;
 }
 
 .cartitem {
@@ -46,6 +45,10 @@
 
 .removeproduct {
   padding: 0.5rem 1rem;
+}
+
+.cartcountwrapper {
+  text-align: center;
 }
 
 .quantitywrapper,
@@ -138,6 +141,7 @@
   }
 
   .cartcontainer {
+    text-align: center;
     flex-direction: column;
   }
 
@@ -148,6 +152,5 @@
 
   .ordersuminfo {
     display: flex;
-    flex-direction: column;
   }
 }
