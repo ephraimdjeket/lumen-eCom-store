@@ -3,12 +3,13 @@ import Card from "../../components/Card";
 import { useState, useEffect } from "react";
 
 
+
 export default function Home() {
   const url = "https://v2.api.noroff.dev/online-shop";
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState("");
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -21,7 +22,7 @@ export default function Home() {
         setProducts(data);
       } catch (error) {
         setError(true);
-        setError(error.message)
+        setError(error.message);
       } finally {
         setLoading(false);
       }
@@ -30,8 +31,8 @@ export default function Home() {
     productData();
   }, [url]);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>
+  if (loading) return <div className="loaderwrapper"><span className="loader"></span></div>;
+  if (error) return <h1 className="errormessage">{error}</h1>;
 
   function searchFilter(e) {
     setSearch(e.target.value);
