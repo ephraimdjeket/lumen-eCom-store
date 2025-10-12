@@ -1,6 +1,4 @@
 ## Lumen eCom Store
-# Goal
-
 This is a school project that was built to apply knowledge of React by creating a simple eCommerce store.
 
 # Features
